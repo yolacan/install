@@ -1,0 +1,7 @@
+#buradaki yazılar komutlar içinde database passwor bilgisi vs var onlara dikkat etmelisiniz.
+
+#redmine database container
+docker run --name myred1 -e MYSQL_ROOT_PASSWORD=turkiye -e MYSQL_DATABASE=redmine -v/my/custom:/etc/mysql/conf.d -v /storage/mysql/datadir:/var/lib/mysql -d mysql:5.6 
+
+#redmine project docker.
+docker run --name abt -p 3000:3000 -v /my/own/datadir:/usr/src/redmine/files --link myred1:mysql -d redmine
