@@ -1,12 +1,13 @@
 #!/bin/bash
-
 sudo dnf update
 sudo dnf config-manager --add-repo https://download.docker.com/linux/rhel/docker-ce.repo
 sudo dnf install docker-ce docker-ce-cli containerd.io -y 
 
-sudo curl -L "https://github.com/docker/compose/releases/latest/download/linux-x86_64" -o /usr/local/bin/docker-compose
-sudo chmod +x /usr/local/bin/docker-compose
+#sudo curl -L "https://github.com/docker/compose/releases/latest/download/linux-x86_64" -o /usr/local/bin/docker-compose
+#sudo chmod +x /usr/local/bin/docker-compose
 
 sudo systemctl start docker
 sudo systemctl enable docker
 sudo systemctl status docker
+
+#FirstApp
